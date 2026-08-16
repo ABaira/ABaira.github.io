@@ -1,9 +1,10 @@
 //onload function to display the last modified date of the document
 //Once the page is loaded it will allow you to use any of the functons.
+
 window.onload = function() {
     console.log('Page loaded');
     lastModified();
-
+    
     //Click event listener for the send button to send the form data to an email address using EmailJS
     $('#send').click(function(event) {
         console.log('Send button clicked');
@@ -13,6 +14,7 @@ window.onload = function() {
             alert('Please enter a valid email address.');
             return;
         }
+        emailInit();
         let name = $('#name').val();
         let email = $('#email').val();
         let message = $('#message').val();
@@ -35,6 +37,12 @@ function validateEmail(email) {
     return emailRegex.test(email);
 }
 
+//initalize emailjs with the public key
+function emailInit(){
+    emailjs.init({
+        publicKey: "RMeWdoA21_i5QlTE-",
+    });
+}
 
 //Function to send the form data to an email address using EmailJS
 function sendEmail(email, name, message) {
