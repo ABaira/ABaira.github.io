@@ -51,7 +51,6 @@ function sendEmail(email, name, message) {
         name: name,
         message: message
     };
-    console.log('Sending email with parameters:', parameters);
     //Send the email using EmailJS
     //service ID, template ID, and parameters form Email.js sent to Icloud email addressW
     emailjs.send('service_68kutn9', 'template_02ia3ed', parameters);
@@ -60,6 +59,7 @@ function sendEmail(email, name, message) {
     clearForm();
 }
 
+//Function to clear the form fields after the email is sent
 function clearForm() {
     $('#name').val('');
     $('#email').val('');
