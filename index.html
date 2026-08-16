@@ -7,6 +7,19 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "RMeWdoA21_i5QlTE-",
+        });
+    })();
+    </script>
 </head>
 <body>
     <header>
@@ -58,13 +71,16 @@
             contact me for more information or to discuss potential opportunities. I am eager to contribute my skills and enthusiasm to a dynamic team.
 
         </p>
-            <form id="contactForm">   
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <textarea id="message" placeholder="Message" required></textarea>
-                <button id="send">Send Message!</button>
-            </form>
-
+        <form id="contactForm">   
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button id="send" type="submit">Send Message!</button>
+        </form>
+        <p>
+            <h3>&copy Adrian Baira</h3>
+            <h3 id="lastModified"></h3>
+        </p>
 
         
     </contact>
