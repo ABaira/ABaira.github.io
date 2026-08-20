@@ -11,37 +11,43 @@
 
     <!-- EmailJS SDK -->
     <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-    
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "RMeWdoA21_i5QlTE-",
+        });
+    })();
+    </script>
 </head>
 <body>
     <header>
         <h1>Adrian Baira</h1>
         <h2>Computer Engineer</h2>
     </header>
-    <about>
+    <section id="about">
         <p>Hello, I'm Adrian Baira, a computer engineer with a passion for creating innovative solutions. 
          I am a graduate from NAIT, with hands-on experience across programming, hardware-software integration, and collaborative technical projects. 
          I enjoy working at the intersection of hardware and code — from embedded systems to full applications — and I'm looking for an entry-level role 
          where I can keep growing and contribute real problem-solving skills to a team.
         </p>
-    </about>
-    <skills>
+    </section>
+    <section id='skills'>
         <p>Programming Languages: Python (Beginner), Java, C++, C# (Intermediate),  JavaScript</p>
         <p>Tools: Git, Visual Studio, VS Code, SQL Server Management Studio</p>
         <p>Operating Systems: Windows, Linux</p>
         <p>Hardware: Raspberry Pi, Arduino, Microcontrollers, Esp-32</p>
         <p>Soft Skills: Teamwork, Communication, Problem-Solving, Adaptability</p>
-    </skills>
-    <education>
+    </section>
+    <section id="education">
         <p>Northern Alberta Institute of Technology (NAIT) — Diploma, Computer Engineering Technology 
             September 2022  April 2025
             Specialized in embedded systems, software development, circuit design, and networking. 
             Completed multiple collaborative projects simulating real-world tech environments.
         </p>
-    </education>
-    <projects>
+    </section>
+    <section id="projects">
         <p>
             Automated Connect 4 Game Board — Capstone / Collaborative Project
             Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
@@ -50,13 +56,13 @@
             Motion-Activated Door System — Mini Prototype
             Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
         </p>
-    </projects>
-    <experience>
+    </section>
+    <section id="experience">
         Head Stock Associate / Sales Associate — Footlocker, Edmonton, AB
         December 2021 – Present (Part-Time)
         Receive, verify, and organize stock for the team; maintain store layout and cleanliness in a fast-paced, team-oriented environment; ensure compliance with stock control procedures; support staff across daily operations.
-    </experience>
-    <contact>
+    </section>
+    <section id="contact">
         <p>
             Edmonton, AB
             (780) 905-3413
@@ -77,7 +83,7 @@
         </p>
 
         
-    </contact>
+    </section>
     
 </body>
 </html>
