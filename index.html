@@ -6,7 +6,7 @@
     <title>Adrian Baira</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- EmailJS SDK -->
@@ -20,70 +20,140 @@
         });
     })();
     </script>
+
+    <!--Link for Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Adrian Baira</h1>
-        <h2>Computer Engineer</h2>
-    </header>
-    <section id="about">
-        <p>Hello, I'm Adrian Baira, a computer engineer with a passion for creating innovative solutions. 
-         I am a graduate from NAIT, with hands-on experience across programming, hardware-software integration, and collaborative technical projects. 
-         I enjoy working at the intersection of hardware and code — from embedded systems to full applications — and I'm looking for an entry-level role 
-         where I can keep growing and contribute real problem-solving skills to a team.
-        </p>
-    </section>
-    <section id='skills'>
-        <p>Programming Languages: Python (Beginner), Java, C++, C# (Intermediate),  JavaScript</p>
-        <p>Tools: Git, Visual Studio, VS Code, SQL Server Management Studio</p>
-        <p>Operating Systems: Windows, Linux</p>
-        <p>Hardware: Raspberry Pi, Arduino, Microcontrollers, Esp-32</p>
-        <p>Soft Skills: Teamwork, Communication, Problem-Solving, Adaptability</p>
-    </section>
-    <section id="education">
-        <p>Northern Alberta Institute of Technology (NAIT) — Diploma, Computer Engineering Technology 
-            September 2022  April 2025
-            Specialized in embedded systems, software development, circuit design, and networking. 
-            Completed multiple collaborative projects simulating real-world tech environments.
-        </p>
-    </section>
-    <section id="projects">
-        <p>
-            Automated Connect 4 Game Board — Capstone / Collaborative Project
-            Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
-            Collaborative Whiteboard App
-            Built a real-time shared whiteboard tool in C# using TCP/IP sockets, with interoperability for Python-based clients. Developed the networking logic and GUI to support multiple simultaneous users.
-            Motion-Activated Door System — Mini Prototype
-            Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
-        </p>
-    </section>
-    <section id="experience">
-        Head Stock Associate / Sales Associate — Footlocker, Edmonton, AB
-        December 2021 – Present (Part-Time)
-        Receive, verify, and organize stock for the team; maintain store layout and cleanliness in a fast-paced, team-oriented environment; ensure compliance with stock control procedures; support staff across daily operations.
-    </section>
-    <section id="contact">
-        <p>
-            Edmonton, AB
-            (780) 905-3413
-            Ajbaira@hotmail.com
+    <!--Navigation Header-->
+    <nav id="navigation">
+        <a href="#top" class="navName">Adrian Baira</a>
+        <div class="navLinks">
+            <a href="#about">About</a>
+            <a href="#actions">Actions</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="layout">
+         <!--Header Content-->
+        <section class="header" id="top">
+            <h3>Edmonton, AB</h3>
+            <h1>Adrian Baira</h1>
+            <h4>Computer Engineer - Embedded Systems & Software Development</h4>
+            <p>NAIT graduate working at the intersection of hardware and code — from microcontrollers 
+                and circuit boards to the applications that run on them. 
+                Looking for an entry-level role where I can keep building and keep learning.
+            </p>
+            <div class="buttons">
+                <a href="#contact">Get in touch</a>
+                <a href="https://www.linkedin.com/in/adrian-baira-3bb774304/">LinkedIn</a>
+                <a href="https://github.com/AdrianBaira">GitHub</a>
+                <a href="Website Resume.pdf" download="AdrianBaira Resume">Resume</a>
+            </div>
+            
+        </section>
 
-            contact me for more information or to discuss potential opportunities. I am eager to contribute my skills and enthusiasm to a dynamic team.
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, I'm Adrian Baira, a computer engineer with a passion for creating innovative solutions. 
+            I am a graduate from NAIT, with hands-on experience across programming, hardware-software integration, and collaborative technical projects. 
+            I enjoy working at the intersection of hardware and code — from embedded systems to full applications — and I'm looking for an entry-level role 
+            where I can keep growing and contribute real problem-solving skills to a team.
+            </p>
+    
+    
+        <section id='skills'>
+            <p>Programming Languages: Python (Beginner), Java, C++, C# (Intermediate),  JavaScript</p>
+            <p>Tools: Git, Visual Studio, VS Code, SQL Server Management Studio</p>
+            <p>Operating Systems: Windows, Linux</p>
+            <p>Hardware: Raspberry Pi, Arduino, Microcontrollers, Esp-32</p>
+            <p>Soft Skills: Teamwork, Communication, Problem-Solving, Adaptability</p>
+        </section>
+        <section id="education">
+            <p>Northern Alberta Institute of Technology (NAIT) — Diploma, Computer Engineering Technology 
+                September 2022  April 2025
+                Specialized in embedded systems, software development, circuit design, and networking. 
+                Completed multiple collaborative projects simulating real-world tech environments.
+            </p>
+        </section>
+        <section id="projects">
+            <p>
+                Automated Connect 4 Game Board — Capstone / Collaborative Project
+                Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
+                Collaborative Whiteboard App
+                Built a real-time shared whiteboard tool in C# using TCP/IP sockets, with interoperability for Python-based clients. Developed the networking logic and GUI to support multiple simultaneous users.
+                Motion-Activated Door System — Mini Prototype
+                Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
+            </p>
+            <p>
+                Automated Connect 4 Game Board — Capstone / Collaborative Project
+                Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
+                Collaborative Whiteboard App
+                Built a real-time shared whiteboard tool in C# using TCP/IP sockets, with interoperability for Python-based clients. Developed the networking logic and GUI to support multiple simultaneous users.
+                Motion-Activated Door System — Mini Prototype
+                Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
+            </p>
+            <p>
+                Automated Connect 4 Game Board — Capstone / Collaborative Project
+                Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
+                Collaborative Whiteboard App
+                Built a real-time shared whiteboard tool in C# using TCP/IP sockets, with interoperability for Python-based clients. Developed the networking logic and GUI to support multiple simultaneous users.
+                Motion-Activated Door System — Mini Prototype
+                Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
+            </p>
+            <p>
+                Automated Connect 4 Game Board — Capstone / Collaborative Project
+                Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
+                Collaborative Whiteboard App
+                Built a real-time shared whiteboard tool in C# using TCP/IP sockets, with interoperability for Python-based clients. Developed the networking logic and GUI to support multiple simultaneous users.
+                Motion-Activated Door System — Mini Prototype
+                Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
+            </p>
+            <p>
+                Automated Connect 4 Game Board — Capstone / Collaborative Project
+                Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers. Programmed game logic, motor control, and wireless multiplayer functionality in C and Python, integrating hardware and software for accurate detection and remote play.
+                Collaborative Whiteboard App
+                Built a real-time shared whiteboard tool in C# using TCP/IP sockets, with interoperability for Python-based clients. Developed the networking logic and GUI to support multiple simultaneous users.
+                Motion-Activated Door System — Mini Prototype
+                Built a working prototype of a motion-activated door using microcontrollers and sensors. Designed the PCB in KiCad and programmed firmware to detect motion and trigger a servo mechanism — a small-scale demonstration of embedded systems in action.
+            </p>
+        </section>
+        <section id="experience">
+            Head Stock Associate / Sales Associate — Footlocker, Edmonton, AB
+            December 2021 – Present (Part-Time)
+            Receive, verify, and organize stock for the team; maintain store layout and cleanliness in a fast-paced, team-oriented environment; ensure compliance with stock control procedures; support staff across daily operations.
+        </section>
+        <section id="contact">
+            <p>
+                Edmonton, AB
+                (780) 905-3413
+                Ajbaira@hotmail.com
 
-        </p>
-        <form id="contactForm">   
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <textarea id="message" placeholder="Message" required></textarea>
-            <button id="send" type="submit">Send Message!</button>
-        </form>
-        <p>
-            <h3>&copy Adrian Baira</h3>
-            <h3 id="lastModified"></h3>
-        </p>
+                contact me for more information or to discuss potential opportunities. I am eager to contribute my skills and enthusiasm to a dynamic team.
 
-        
-    </section>
+            </p>
+            <form id="contactForm">   
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="you@example.com" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button id="send" type="submit">Send Message!</button>
+            </form>
+            <p>
+                <h3>&copy Adrian Baira</h3>
+                <h3 id="lastModified"></h3>
+            </p>
+
+            
+        </section>
+
+
+    </div>
+   
     
 </body>
 </html>
