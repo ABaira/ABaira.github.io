@@ -3,7 +3,9 @@ body
     font-family: 'Quicksand', sans-serif;
     margin: 0%;
 }
-
+:root {
+    --line: #DEDACE;
+}
 #navigation
 {
     position: sticky;
@@ -17,7 +19,10 @@ body
     border-bottom: 1px solid var(--line);
     box-sizing:border-box;
 }
-
+a
+{
+    text-decoration: none;
+}
 .navName
 {
     font-size: 16px;
@@ -67,8 +72,9 @@ body
     grid-column: 2;
     
 }
-#about, #skills, #education, #projects, #experience, #contact
+#about, #skills, #education, #projects, #experience, #contact, #footer
 {
+    scroll-margin-top: 100px;
     grid-column: 2;
 }
 hr
@@ -92,15 +98,16 @@ form
     margin: 0;
 }
 
-.Skills-group ul
+.skills-Group ul
 {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px
    
 }
-.Skills-group li
+.skills-Group li
 {
     list-style-type: none;
     margin: 5px 0;
@@ -115,9 +122,11 @@ form
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
-.dates{
+.dates
+{
     grid-column: 1;
 }
-.experience{
+.experience
+{
     grid-column: 2;
 }
