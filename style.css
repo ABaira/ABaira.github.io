@@ -2,9 +2,40 @@ body
 {
     font-family: 'Quicksand', sans-serif;
     margin: 0%;
+    background: var(--bg);
+    color: var(--ink);
 }
 :root {
+    --bg: #FAFAF6;
+    --ink: #171917;
+    --ink-soft: #4B4F4B;
     --line: #DEDACE;
+    --accent: #A6531C;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #17181A;
+        --ink: #F2F1EC;
+        --ink-soft: #B8B6AD;
+        --line: #3A3B38;
+        --accent: #D97B45;
+    }
+}
+:root[data-theme="dark"] {
+    --bg: #17181A;
+    --ink: #F2F1EC;
+    --ink-soft: #B8B6AD;
+    --line: #3A3B38;
+    --accent: #D97B45;
+}
+
+:root[data-theme="light"] {
+    --bg: #FAFAF6;
+    --ink: #171917;
+    --ink-soft: #4B4F4B;
+    --line: #DEDACE;
+    --accent: #A6531C;
 }
 #navigation
 {
@@ -14,10 +45,11 @@ body
     justify-content: space-between;
     align-items: center;
     padding: 18px 24px;
-    background: white;
+    background: var(--bg);  
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
     box-sizing:border-box;
+    z-index: 10;
 }
 a
 {
@@ -65,7 +97,7 @@ a
 .layout
 {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
 }
 .header
 {
@@ -129,4 +161,49 @@ form
 .experience
 {
     grid-column: 2;
+}
+.hoverLift
+{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hoverLift:hover
+{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+li
+{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+li:hover
+{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.products
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+.project-card
+{
+    border: 2px solid black;
+    border-radius: 12px;
+    background: white;
+    padding: 12px;
+}
+.project-photo
+{
+    height: 120px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: #F1EFE8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 11px;
+    margin-bottom: 12px;
 }

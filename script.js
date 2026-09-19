@@ -20,7 +20,19 @@ window.onload = function() {
         
         //sendEmail(email, name, message);
     });
-    
+    const root = document.documentElement;
+    const theme = localStorage.getItem('theme');
+    if(theme)
+    {
+        root.setAttribute('data-theme', theme);
+    }
+    document.getElementById('themeToggle').addEventListener('click', function()
+    {
+        const isDark = getComputedStyle(root).getPropertyValue('--bg').trim() == '#17181A';
+        const newTheme = isDark ? 'light' : 'dark';
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
 
 }
 
@@ -63,3 +75,7 @@ function clearForm() {
     // $('#email').val('');
     // $('#message').val('');
 }
+
+
+
+
