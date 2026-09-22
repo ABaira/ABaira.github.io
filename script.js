@@ -1,9 +1,26 @@
 //onload function to display the last modified date of the document
 //Once the page is loaded it will allow you to use any of the functons.
+
+//Typewriter Things roles i could be in industry from NAIT website from CNT program
+const roles = [
+    "Web Development",
+    "Application Development",
+    "Data Communication System Support",
+    "Software Development and Support",
+    "Instrumentation and Data Acquisition",
+    "Process Control Hardware and Software",
+    "Programmable Logic Design",
+    "Database Programming"
+];
+
+//Type writer Variables
+let rolesIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 window.onload = function() {
     console.log('Page loaded');
     lastModified();
-
+    typeLoop();
     //Click event listener for the send button to send the form data to an email address using EmailJS
     document.getElementById('send').addEventListener('click', function(event){
         console.log('Send button clicked');
@@ -43,6 +60,46 @@ function lastModified() {
     document.getElementById('lastModified').textContent = string;
     //$('#lastModified').text(`${string}`);
 }
+function typeLoop()
+{
+    //get current role from list
+    const currentRole = roles[rolesIndex];
+    const target = document.getElementById('typewriter');
+
+    //add or delete characters 
+    if (isDeleting) 
+    {
+        charIndex--;
+    } 
+    else 
+    {
+        charIndex++;
+    }
+    //add character into html
+    target.textContent = currentRole.substring(0, charIndex);
+
+    //deleting speed / updating speed 
+    let speed = isDeleting ? 10 : 35;
+    
+    //if we are not deleting then keep typing each character
+   
+    if (!isDeleting && charIndex === currentRole.length) 
+    {
+        speed = 700;
+        isDeleting = true;
+    } 
+    //if we are deleting then stop
+    else if (isDeleting && charIndex === 0) 
+    {
+        isDeleting = false;
+        rolesIndex = (rolesIndex + 1) % roles.length;
+        speed = 150;
+    }
+
+    setTimeout(typeLoop, speed);
+}
+
+
 
 //function to verify email adress using regex
 function validateEmail(email) {

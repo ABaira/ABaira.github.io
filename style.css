@@ -43,7 +43,6 @@ body
     top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 18px 24px;
     background: var(--bg);  
     backdrop-filter: blur(6px);
@@ -105,7 +104,6 @@ a
 .header
 {
     grid-column: 2;
-    
 }
 #about, #skills, #education, #projects, #experience, #contact, #footer
 {
@@ -189,8 +187,13 @@ li:hover
 .products
 {
     display: flex;
-    width: 50;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
+}
+.products > div
+{
+    flex: 0 0 calc(33.333% - 10px);
 }
 .project-card
 {
@@ -198,6 +201,7 @@ li:hover
     border-radius: 12px;
     background: var(--bg);
     padding: 12px;
+    box-sizing: border-box;
 }
 .project-photo
 {
@@ -211,4 +215,13 @@ li:hover
     color: var(--ink-soft);
     font-size: 11px;
     margin-bottom: 12px;
+}
+.cursor
+{
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink
+{
+    50% { opacity: 0; }
 }
