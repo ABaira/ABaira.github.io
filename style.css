@@ -88,10 +88,13 @@ a
     border: 1px solid var(--line);
     padding: 1% 2%;
     border-radius: 4px;
+    text-align: center;
+    display: flex;
+    gap: 6px
 }
 .buttons a:hover
 {
-    background-color: orange;
+   background: linear-gradient(135deg, #4DABF7, #3BC9DB, #38D9A9);
 }
 
 .layout
@@ -123,6 +126,7 @@ form
 {
     list-style-type: none;
     margin: 5px 0;
+    background: var(--bg);
 }
 #contactInfo
 {
@@ -175,6 +179,7 @@ form
 li
 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(135deg, #4DABF7, #3BC9DB, #38D9A9);
 }
 li:hover
 {
@@ -191,7 +196,7 @@ li:hover
 {
     border: 2px solid black;
     border-radius: 12px;
-    background: white;
+    background: var(--bg);
     padding: 12px;
 }
 .project-photo
@@ -199,7 +204,7 @@ li:hover
     height: 120px;
     border-radius: 8px;
     border: 1px solid var(--line);
-    background: #F1EFE8;
+    background: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
