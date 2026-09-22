@@ -188,8 +188,8 @@ li:hover
 }
 .products
 {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    width: 50;
     gap: 15px;
 }
 .project-card
